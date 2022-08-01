@@ -5,7 +5,7 @@ int main(){
 	scanf("%d", &n);
 
 	int arr[n];
-	int i, j, high, second;
+	int i, j, k, high, second;
 
 	printf("Hay nhap %d so nguyen:\n", n);
 	for (i=0; i<n; i++){
@@ -13,16 +13,25 @@ int main(){
 	}
 
 	high = arr[0];
-	second = arr[n-1];
 	for(i=1; i<n; i++){
 		if(arr[i] > high){
 			high = arr[i];
 		}
 	}
 
-	for(j=n-1; j>=0; j--){
-		if(arr[j] > second && arr[j]!=high){
-			second = arr[j];
+	if(arr[0]==high){
+		second = arr[1];
+		for(j=2; j<n; j++){
+			if(arr[j] > second && arr[j] != high){
+				second = arr[j];
+			}
+		}
+	}else{
+		second = arr[0];
+		for(j=1; j<n; j++){
+			if(arr[j] > second && arr[j] != high){
+				second = arr[j];
+			}
 		}
 	}
 
