@@ -5,7 +5,7 @@ int main(){
 	scanf("%d", &n);
 	
 	int arr[n];
-	printf("Please enter %d interger(s):\n", n);
+	printf("Please enter %d integer(s):\n", n);
 	for(int i=0; i<n; i++){
 		scanf("%d", &arr[i]);
 	}
