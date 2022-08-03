@@ -11,18 +11,26 @@ int main(){
 	}
 
 	int x;
-	int flag = 0;
 	printf("Nhap x = ");
 	scanf("%d", &x);
+
+	int flag = 0;	// bool t = false;
+
 	for(int i=0; i<n; i++){
 		if(arr[i]==x){
 			printf("%d thuoc mang.", x);
-			flag = 1;
+			flag = 1;	// flag = true;
 			break;
 		}
 	}
 
-	if(flag==0){
+	if(flag==0){	// flag == false
 		printf("%d khong thuoc mang.", x);
 	}
 }
+
+//	if(flag){	// flag==true
+//		printf("%d khong thuoc mang.", x);
+//	}else{
+//		printf("%d thuoc mang.", x);
+//	}

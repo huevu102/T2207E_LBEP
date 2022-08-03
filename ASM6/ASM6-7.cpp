@@ -21,7 +21,6 @@ int main(){
 			}
 		}else{
 			total = 0;
-			continue;
 		}
 	}
 	

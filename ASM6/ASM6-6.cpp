@@ -20,7 +20,6 @@ int main(){
 			}
 		}else{
 			count = 0;
-			continue;
 		}
 	}
 	

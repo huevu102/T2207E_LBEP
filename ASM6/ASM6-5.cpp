@@ -10,17 +10,15 @@ int main(){
 		scanf("%d", &arr[i]);
 	}
 	
-	int min;
-	int count = 0;
+	int min = 0;
 	for(int i=0; i<n; i++){
 		if(arr[i]>0){
 			min = arr[i];
-			count = 1;
 			break;
 		}
 	}
 
-	if(count==0){
+	if(min==0){
 		printf("The array has no positive.");	
 	}else{
 		for(int i=0; i<n; i++){
