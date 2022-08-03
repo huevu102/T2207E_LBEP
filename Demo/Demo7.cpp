@@ -1,39 +1,41 @@
 #include <stdio.h>
 int main(){
 	int n;
-	printf("Nhap n = \n");
+	printf("Nhap n = ");
 	scanf("%d", &n);
 
 	int arr[n];
-	int i, j, k, high, second;
+	int high;
 
 	printf("Hay nhap %d so nguyen:\n", n);
-	for (i=0; i<n; i++){
+	for(int i=0; i<n; i++){
 		scanf("%d", &arr[i]);
 	}
 
 	high = arr[0];
-	for(i=1; i<n; i++){
+	for(int i=1; i<n; i++){
 		if(arr[i] > high){
 			high = arr[i];
 		}
 	}
+	printf("Gia tri lon nhat la %d", high);
 
-	if(arr[0]==high){
-		second = arr[1];
-		for(j=2; j<n; j++){
-			if(arr[j] > second && arr[j] != high){
-				second = arr[j];
-			}
-		}
-	}else{
-		second = arr[0];
-		for(j=1; j<n; j++){
-			if(arr[j] > second && arr[j] != high){
-				second = arr[j];
-			}
+	int second = high;
+	for(int i=0; i<n; i++){
+		if(arr[i] < high){
+			second = arr[i];
+			break;
 		}
 	}
 
-	printf("Gia tri lon nhat va gan lon nhat là: %d và %d", high, second);
+	if(second == high){
+		printf("Mang khong co gia tri lon nhat.");
+	}else{
+		for(int i=0; i<n; i++){
+			if(arr[i] > second && arr[i] < high){
+				second = arr[i];
+			}
+		}
+	printf("Gia tri gan lon nhat là %d", second);	
+	}
 }
