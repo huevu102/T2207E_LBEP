@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 int main(){
-	int num;
-	for(num=1; num<=100; num++){
-		if(num%9==0){
-			continue;
-		}
-		printf("%d\t", num);
+	char alpha[26];
+	int i, j;
+	for(i=65,j=0; i<91; i++,j++){
+    	alpha[j] = i;
+    	printf("The character is %c \n", alpha[j]);
 	}
 }
