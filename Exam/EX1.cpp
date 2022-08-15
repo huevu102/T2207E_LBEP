@@ -1,24 +1,24 @@
 #include <stdio.h>
 #include <string.h>
 
-int main () {
+int main(){
    	int x;
     printf ("Length of S1 is: \n");  
-    do {                                             
+    do{                                             
    		scanf("%d", &x);
    		if (x <=0) { printf ("Please input x > 0 \n ");
-	   } 
+	  } 
     }while(x <= 0);
 
     char s1[x];
-    printf ("Please input S1: \n");
+    printf("Please input S1: \n");
     scanf("%s", s1);                                  
    
     int y;
-    printf ("Length of S2 is: \n"); 
+    printf("Length of S2 is: \n"); 
     do{                                                            
       scanf("%d", &y);
-      if (y <= 0){printf ("Please input y > 0 \n ");} 
+      if(y <= 0){printf ("Please input y > 0 \n ");} 
     }while(y <= 0);
 
     char s2[y];
@@ -32,27 +32,28 @@ int main () {
    	    strcpy(s1,stemp);
     }
 
-    bool  flag = false;
+    bool flag = false;
 	int i = 0;
-		while ( s2[i] != 0){                     
-			if ( s2[i] == s1[0]) {
-				int j = 0;
-				while( s1[j] != 0 && s2[i] != 0 && s1[j] == s2[i]){
-					i++;
-					j++;
-				}
-				if( s1[j] == 0) {
-					flag = true;
-					break;
-				}
-			} else { 
-				i++;}
-		}
 
-    if (flag) { 
- 	   printf ("YES");
-    } else { 
-     	printf ("NO");
+	while (s2[i] != 0){                     
+		if (s2[i] == s1[0]){
+			int j = 0;
+			while(s1[j] != 0 && s2[i] != 0 && s1[j] == s2[i]){
+				i++;
+				j++;
+			}
+			if( s1[j] == 0) {
+				flag = true;
+				break;
+			}
+		}else{ 
+			i++;}
+	}
+
+    if(flag){ 
+ 	   printf("YES");
+    }else{ 
+     	printf("NO");
     }
     return 0;	
 }
