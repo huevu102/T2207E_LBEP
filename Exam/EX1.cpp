@@ -32,7 +32,7 @@ int main () {
    	    strcpy(s1,stemp);
     }
 
-    bool  T = false;
+    bool  flag = false;
 	int i = 0;
 		while ( s2[i] != 0){                     
 			if ( s2[i] == s1[0]) {
@@ -42,14 +42,14 @@ int main () {
 					j++;
 				}
 				if( s1[j] == 0) {
-					T = true;
+					flag = true;
 					break;
 				}
 			} else { 
 				i++;}
 		}
 
-    if (T) { 
+    if (flag) { 
  	   printf ("YES");
     } else { 
      	printf ("NO");
