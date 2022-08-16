@@ -4,13 +4,13 @@
 int main (){
 	int x, y;
 	
-	printf("Please input length of string S1, x = ");
+	printf("Please input maximum characters of string S1, x = ");
 	scanf("%d", &x);
 	char s1[x];	
 	printf("Please enter string S1: \n");
 	scanf("%s", &s1);	
 	
-	printf("Please input length of string S2, y = ");
+	printf("Please input maximum characters of string S2, y = ");
 	scanf("%d", &y);
 	char s2[y];
 	printf("Please enter string S1: \n");
