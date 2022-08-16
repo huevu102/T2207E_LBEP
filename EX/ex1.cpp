@@ -16,20 +16,13 @@ int main (){
 	printf("Please enter string S1: \n");
 	scanf("%s", &s2);
 	
-	int s = strlen(s1);
-	int l = strlen(s2);
-	
-	printf("%d\t%d\t", s, l);
-	
-	if(s>l){
-		char temp[x];
-		strcpy(temp, s1);
-		strcpy(s1, s2);
-		strcpy(s2, temp);
-	}
-	
 	char *p;
-	p = strstr(s2, s1);
+	
+	if( strlen(s1) > strlen(s2)){
+		p = strstr(s1, s2);
+	}else{
+		p = strstr(s2, s1);
+	}
 	
 	if(p==NULL){
 		printf("NO");
